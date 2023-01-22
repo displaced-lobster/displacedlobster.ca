@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .card {
+        @apply transition-all;
+        background-color: theme('colors.white');
+        border-radius: theme('borderRadius.lg');
+        padding: theme('spacing.6');
+    }
+  }
+
+body {
+    @apply bg-slate-800;
+    @apply text-lg;
+    @apply text-slate-200;
+}
+
+a {
+    @apply transition-all;
+    @apply text-cyan-500;
+    @apply hover:underline;
+}
+
+img {
+    @apply rounded;
+}
+
+nav a {
+    @apply text-slate-200;
+    @apply hover:text-cyan-500;
+    @apply transition-colors;
+}
+
+nav a:hover {
+    text-decoration: none;
+}
+
+h1 {
+    @apply text-4xl;
+    @apply font-bold;
+    @apply mb-4;
+}
+
+h2 {
+    @apply text-3xl;
+    @apply font-bold;
+    @apply mb-4;
+    @apply mt-8;
+}
+
+h3 {
+    @apply text-2xl;
+    @apply font-bold;
+    @apply mb-4;
+    @apply mt-8;
+}
+
+ul {
+    @apply list-disc;
+    @apply list-inside;
+    @apply ml-8;
+}
+
+li {
+    @apply mb-1;
+}
+
+p {
+    @apply my-8;
+}
+
+pre {
+    @apply overflow-x-auto;
+    @apply py-4;
+    @apply px-10;
+    @apply -mx-10;
+    @apply rounded;
+    @apply my-8;
+    @apply text-base;
+}

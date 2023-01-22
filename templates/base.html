@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}{% endblock title %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ get_url(path='dist/style.css', cachebust=true) }}">
+  </head>
+  <body>
+    <div>
+      <nav class="bg-cyan-900 fixed top-0 left-0 right-0 space-x-6 p-3 pl-10">
+        <a href="/">Home</a>
+        <a href="/posts">Posts</a>
+      </nav>
+      <main class="container max-w-prose mx-auto py-20">
+        {% block content %}{% endblock content %}
+      </main>
+      <footer class="bg-cyan-900 text-center p-3">
+        A Footer!
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "parcel build styles/style.css --dist-dir static/dist --no-source-maps",
+    "watch": "parcel watch styles/style.css --dist-dir static/dist --no-hmr --no-source-maps"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.8.2",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.4"
+  }
+}
