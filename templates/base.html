@@ -5,18 +5,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ get_url(path='dist/style.css', cachebust=true) }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#836efe">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://kit.fontawesome.com/227cd93e8f.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div>
+    <div class="flex flex-col grow min-h-screen">
       <nav class="bg-cyan-900 fixed top-0 left-0 right-0 space-x-6 p-3 pl-10">
         <a href="/">Home</a>
-        <a href="/posts">Posts</a>
       </nav>
-      <main class="container max-w-prose mx-auto py-20">
+      <main class="container grow max-w-prose mx-auto py-20">
         {% block content %}{% endblock content %}
       </main>
-      <footer class="bg-cyan-900 text-center p-3">
-        A Footer!
+      <footer class="bg-cyan-900 flex-none text-center p-3 text-3xl">
+        <a href="https://github.com/displaced-lobster" title="Github">
+          <i class="fa-brands fa-github"></i>
+        </a>
       </footer>
     </div>
   </body>

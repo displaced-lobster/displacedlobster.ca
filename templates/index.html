@@ -3,7 +3,19 @@
 {% block title %}RichardMills.ca{% endblock title %}
 
 {% block content %}
-<article>
-    <h1>Displaced Lobster</h1>
-</article>
+  <h1 class="mb-20">Displaced Lobster</h1>
+
+  <div class="space-y-10">
+    {% for page in section.pages %}
+    <div>
+      <a href="{{ page.permalink }}">
+        <div class="bg-slate-900 border-2 border-slate-700 hover:border-current card">
+          <div class="text-2xl font-bold">{{ page.title }}</div>
+          <div class="my-4 text-sm text-slate-400">{{ page.date }} • {{ page.reading_time }} min read</div>
+          <div class="text-slate-200">{{ page.description }}</div>
+        </div>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
 {% endblock content %}

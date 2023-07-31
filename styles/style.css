@@ -27,6 +27,7 @@ img {
     @apply rounded;
 }
 
+footer a,
 nav a {
     @apply text-slate-200;
     @apply hover:text-cyan-500;
