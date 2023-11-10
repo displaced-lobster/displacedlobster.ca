@@ -34,9 +34,10 @@ img {
 
 footer a,
 nav a {
-    @apply text-slate-200;
-    @apply hover:text-secondary;
+    @apply text-slate-900;
+    @apply hover:text-slate-200;
     @apply transition-colors;
+    @apply font-bold;
 }
 
 nav a:hover {
