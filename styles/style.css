@@ -124,9 +124,13 @@ pre {
     transition: filter,scale 0.2s ease-in-out;
 }
 
-.home-link:hover img {
-    filter: brightness(1.5);
+nav a:hover .logo,
+nav a:hover i {
     scale: 1.2;
+}
+
+nav a:hover .logo {
+    filter: brightness(1.5);
 }
 
 .lobster {
