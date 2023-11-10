@@ -5,7 +5,13 @@ module.exports = {
     "./templates/shortcodes/**/*.html",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#7f7ffe',
+        secondary: '#31c2cb',
+        accent: '#96a5f7',
+      },
+    },
   },
   plugins: [],
 }

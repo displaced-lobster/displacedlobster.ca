@@ -9,6 +9,11 @@
         border-radius: theme('borderRadius.lg');
         padding: theme('spacing.6');
     }
+
+    .card:hover {
+        @apply shadow-lg;
+        scale: 1.01;
+    }
   }
 
 body {
@@ -19,7 +24,7 @@ body {
 
 a {
     @apply transition-all;
-    @apply text-cyan-500;
+    @apply text-secondary;
     @apply hover:underline;
 }
 
@@ -30,7 +35,7 @@ img {
 footer a,
 nav a {
     @apply text-slate-200;
-    @apply hover:text-cyan-500;
+    @apply hover:text-secondary;
     @apply transition-colors;
 }
 
@@ -80,4 +85,51 @@ pre {
     @apply rounded;
     @apply my-8;
     @apply text-base;
+}
+
+.glitch-stack {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.glitch-stack span {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    --stack-height: calc(100% / var(--stacks) - 1px);
+    --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+    --clip-top: calc(var(--stack-height) * var(--index));
+    --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+    clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+    animation: glitch 2s ease infinite 2s alternate-reverse;
+}
+
+.glitch-stack span:nth-child(odd) { --glitch-translate: 8px; }
+
+.glitch-stack span:nth-child(even) { --glitch-translate: -8px; }
+
+@keyframes glitch {
+    0% {
+        text-shadow: -2px 3px 0 currentColor, 2px -3px 0 currentColor;
+        transform: translate(var(--glitch-translate));
+    }
+    2% {
+        text-shadow: 2px -3px 0 currentColor, -2px 3px 0 currentColor;
+    }
+    4%, 100% {  text-shadow: none; transform: none; }
+}
+
+.logo {
+    filter: brightness(1);
+    transition: filter,scale 0.2s ease-in-out;
+}
+
+.home-link:hover img {
+    filter: brightness(1.5);
+    scale: 1.2;
+}
+
+.lobster {
+    object-fit: none;
+    height: 600px;
+    object-position: 50% 0;
 }
