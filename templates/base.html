@@ -16,7 +16,7 @@
   </head>
   <body>
     <div class="flex flex-col grow min-h-screen">
-      <div class="bg-primary fixed w-screen p-3 z-10">
+      <div class="bg-primary fixed w-screen p-1 z-10">
         <nav class="flex flex-row items-center justify-between top-0 left-0 right-0 space-x-6 max-w-prose mx-auto">
           <a class="flex items-center home-link" href="/">
             <img src="{{ get_url(path='images/lobster-clear.png') }}" alt="Displaced Lobster" class="h-10 logo">
@@ -27,12 +27,34 @@
           </a>
         </nav>
       </div>
-      <main class="container grow max-w-prose mx-auto py-20">
+      <main class="container grow max-w-prose mx-auto pt-20">
         {% block content %}{% endblock content %}
       </main>
       <footer class="max-w-prose mx-auto">
-        <img src="{{ get_url(path='images/lobster-clear.png') }}" alt="Displaced Lobster" class="lobster">
+        <img
+          id="lobster"
+          alt="Displaced Lobster"
+          class="lobster"
+          src="{{ get_url(path='images/lobster-clear.png') }}"
+        >
       </footer>
     </div>
+    <script>
+      const lobster = document.getElementById('lobster')
+
+      function updateLobsterPosition() {
+        const padding = 50
+        const offset = lobster.offsetTop
+        const bottom = window.innerHeight + window.scrollY
+        const height = 600
+
+        const position = Math.max(0, height - (bottom - offset + padding))
+
+        lobster.style.objectPosition = `50% ${position}px`
+      }
+
+      window.addEventListener('scroll', updateLobsterPosition)
+      updateLobsterPosition()
+    </script>
   </body>
 </html>

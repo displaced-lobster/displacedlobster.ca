@@ -5,7 +5,6 @@
 @layer components {
     .card {
         @apply transition-all;
-        background-color: theme('colors.white');
         border-radius: theme('borderRadius.lg');
         padding: theme('spacing.6');
     }
@@ -136,5 +135,5 @@ nav a:hover .logo {
 .lobster {
     object-fit: none;
     height: 600px;
-    object-position: 50% 0;
+    object-position: 50% 600px;
 }
