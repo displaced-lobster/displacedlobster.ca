@@ -88,6 +88,7 @@ pre {
 }
 
 .glitch-stack {
+    cursor: crosshair;
     display: grid;
     grid-template-columns: 1fr;
 }
