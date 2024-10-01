@@ -100,22 +100,25 @@ pre {
     --clip-top: calc(var(--stack-height) * var(--index));
     --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
     clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
-    animation: glitch 2s ease infinite 2s alternate-reverse;
 }
 
 .glitch-stack span:nth-child(odd) { --glitch-translate: 8px; }
 
 .glitch-stack span:nth-child(even) { --glitch-translate: -8px; }
 
+.glitch-stack:hover span {
+    animation: glitch 0.5s ease;
+}
+
 @keyframes glitch {
     0% {
         text-shadow: -2px 3px 0 currentColor, 2px -3px 0 currentColor;
         transform: translate(var(--glitch-translate));
     }
-    2% {
+    20% {
         text-shadow: 2px -3px 0 currentColor, -2px 3px 0 currentColor;
     }
-    4%, 100% {  text-shadow: none; transform: none; }
+    40%, 100% {  text-shadow: none; transform: none; }
 }
 
 .logo {
