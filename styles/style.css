@@ -19,6 +19,8 @@ body {
     @apply bg-slate-800;
     @apply text-lg;
     @apply text-slate-200;
+    font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+    font-weight: normal;
 }
 
 a {
@@ -45,22 +47,22 @@ nav a:hover {
 
 h1 {
     @apply text-4xl;
-    @apply font-bold;
-    @apply mb-4;
 }
 
 h2 {
     @apply text-3xl;
-    @apply font-bold;
-    @apply mb-4;
     @apply mt-8;
 }
 
 h3 {
     @apply text-2xl;
+    @apply mt-8;
+}
+
+h1, h2, h3 {
     @apply font-bold;
     @apply mb-4;
-    @apply mt-8;
+    font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
 }
 
 ul {
